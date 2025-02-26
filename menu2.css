@@ -1,0 +1,83 @@
+
+.efeito img{
+ opacity: 1.0; /*esta linha é a que escurece a imagem*/
+ } 
+.efeito img:hover{
+ opacity: 0.2; /*esta linha é a que clareia a imagem*/
+ }
+
+.menu-on {
+	background-color: #000;
+	color: #e84700;
+	position: fixed;
+	right: 0;
+	top: 0;
+	z-index: 1000;
+	padding: 5px;
+	font-family:"Lucida Grande",Helvetica, Arial, Trebuchet MS;
+	font-weight: bold;
+}
+
+.menu-off {
+	position: fixed;
+	left: 0;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 1000;
+	display: none;
+}
+
+nav.secundary-nav {
+	background-color: #000;
+	position: fixed;
+	right: 0;
+	top: 0;
+	min-width: 200px;
+	z-index: 1002;
+	display: none;
+	background-image: url('teste1.jpg');
+	background-repeat:no-repeat;
+	background-position: 70px 20px;
+	background-size: 100px 100px;
+}
+
+
+ 
+ nav.secundary-nav a {
+	 color: #91918C;
+	 display: block;
+	 padding: 5px 10px;
+	 font-family:"Lucida Grande",Helvetica, Arial, Trebuchet MS;
+ }
+ 
+ 
+ 
+#toggle-menu2 {
+	display: none;
+} 
+ 
+ #toggle-menu2:checked ~ nav.secundary-nav {
+	 display: block;
+ }
+ 
+ #toggle-menu2:checked ~ .menu-off {
+	 display: block
+ }
+
+ 
+ 
+ @midia screen and (min-width: 500px) {
+	 
+	 .menu2-on, .menu2-off {
+		 display: none;
+	 }
+	 
+	 nav.secundary-nav {
+		 display: block;
+		 position: static;
+	 }
+	 
+	 nav.secundary-nav a {
+		display: inline-block;
+	}
